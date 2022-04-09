@@ -78,7 +78,7 @@ def myhill_nerode(security_arg=None):
         for small_state in state:
             if states[small_state] == "S" and marking != "F" and marking != "S/F":
                 marking = "S"
-            elif states[small_state] == "S" and marking == "F":
+            elif states[small_state] == "S" and marking == "F" or marking == "S" and states[small_state] == "F":
                 marking = "S/F"
             elif states[small_state] == "F" and marking != "S" and marking != "S/F":
                 marking = "F"
